@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>hello<h1>
+	{% if user.is_authenticated %}
+		Welcome {{user.username}}
+		<form action="{% url 'logout' %}" method="POST">
+			{% csrf_token %}
+			<button type="submit">Logout</button>
+{% else %}
+<form action ="{% url 'normallogin' %}" method="POST">
+	<button type="submit"> Login
+	</button>
+<form action="%url 'register' %"></form>
+	{% endif %}	
+
+</body>
+</html>

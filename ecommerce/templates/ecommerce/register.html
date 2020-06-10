@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="signup container my-3">
+
+      
+        
+          <div
+            class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4"
+          >
+            <h1 class="mb-3 text-center">Create a new account</h1>
+            
+       
+  <form class=" mb-3" method="POST">
+  	<div class="row">
+    {% csrf_token %}
+    {{ registeration_form.as_p }}
+    <button type="submit">Sign up</button>
+</div>
+  </form>
+
+</div>
+</div>
+</body>
+</html>
